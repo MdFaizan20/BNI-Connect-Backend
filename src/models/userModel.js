@@ -6,10 +6,10 @@ const userschema = new mongoose.Schema({
         type:String,
         required:true,
     },
-     userId:{
+    userId:{
         type:Number,
-        required:true,
-        unique:true
+        required:true
+      ///  unique:true
     },
 password:{
     type:String,
@@ -18,13 +18,13 @@ password:{
 },
 emailId:{
     type:String,
-    required:true,
-    unique:true
+    required:true
+    // unique:true
 },
 userName:{
     type:String,
-    required:true,
-    unique:true
+    required:true
+ //unique:true
 },
 gender:{
     type:String,
@@ -44,4 +44,6 @@ profile:{
 
 },{timestamps:true})
 
-module.exports=mongoose.model("userDatabase",userschema)
+
+
+module.exports=mongoose.model("userStorage",userschema)
