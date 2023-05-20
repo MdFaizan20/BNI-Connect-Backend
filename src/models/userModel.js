@@ -8,8 +8,8 @@ const userschema = new mongoose.Schema({
     },
     userId:{
         type:Number,
-        required:true
-      ///  unique:true
+        required:true,
+       unique:true
     },
 password:{
     type:String,
@@ -18,13 +18,14 @@ password:{
 },
 emailId:{
     type:String,
-    required:true
-    // unique:true
+    required:true,
+    lowercase:true,
+    unique:true
 },
 userName:{
     type:String,
-    required:true
- //unique:true
+    required:true,
+ unique:true
 },
 gender:{
     type:String,
